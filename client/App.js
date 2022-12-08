@@ -2,6 +2,7 @@
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
 import RouteStack from './routes/RouteStack';
+import 'react-native-gesture-handler';
 
 function App() {
   return (

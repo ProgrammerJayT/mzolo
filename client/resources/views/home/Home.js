@@ -1,12 +1,32 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-import {StyleSheet, Text, SafeAreaView} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  SafeAreaView,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 
-const Home = () => {
+const Home = ({navigation}) => {
+  const toggleDrawer = () => {
+    navigation.toggleDrawer();
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Home screen</Text>
+      <View style={styles.nav}>
+        <TouchableOpacity onPress={toggleDrawer}>
+          <Text>Toggle</Text>
+        </TouchableOpacity>
+
+        <Text>Home</Text>
+
+        <TouchableOpacity>
+          <Text>Image</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView>
   );
 };
@@ -17,7 +37,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+
+  nav: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    justifyContent: 'center',
+    padding: 20,
   },
 });

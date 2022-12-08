@@ -1,12 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import {StyleSheet, Text, SafeAreaView, Image, View} from 'react-native';
-import React from 'react';
+import * as React from 'react';
 
 const Splash = ({navigation}) => {
   //Navigate to Home screen after 3 seconds
   setTimeout(() => {
-    navigation.navigate('Home');
+    navigation.navigate('Drawer');
   }, 2000);
 
   return (
